@@ -8,7 +8,7 @@ If a1 and/or a2 are empty return -1 in each language except in Haskell (F#) wher
 
 '''
 
-		
+O(n*n)		
 def mxdiflg(a1, a2):
     if a1 and a2:
         return max(abs(len(x) - len(y)) for x in a1 for y in a2)
@@ -37,16 +37,19 @@ def mxdiflg4(a1, a2):
     lens=max(len_1,len_2)
     for i in range(lens):
         if (i<len_1):
-            if a1[i]>max_1:
-                max_1=a1[i]
-            elif a1[i] <min_1:
-                min_1=a1[i]
+            if i==0:
+                min_1=len(a1[0])
+            if len(a1[i])>max_1:
+                max_1=len(a1[i])
+            if len(a1[i])<min_1:
+                min_1=len(a1[i])
         if (i<len_2):
-            if a2[i]>max_1:
-                max_2=a2[i]
-            elif a2[i] <min_1:
-                min_2=a2[i]                
-    
+            if i==0:
+                min_2=len(a2[0])
+            if len(a2[i])> max_2:
+                max_2=len(a2[i])
+            if len(a2[i])<min_2:
+                min_2=len(a2[i])   
     return max([max_1-min_2,max_2-min_1])	
 
 
