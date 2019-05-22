@@ -50,11 +50,54 @@ Adjacent digits don't differ by 1
 ```
 7- jumpingNumber(32) ==> return "Jumping!!"
 ```
-Write an efficient algorithm for the following assumptions:</br>
-<ul>
-    <li>N is an odd integer within the range [1..1,000,000];</li></br>
-    <li>each element of array A is an integer within the range [1..1,000,000,000];</li></br>
-    <li>all but one of the values in A occur an even number of times.</li></br>
-</ul>
+
+<sol> 一般解法將數字轉為字串,再將字串轉成數字陣列,前後比較差值是否為1
+
+``` python
+def jumping_number(number):  
+    number=str(number)  
+    for i in range(len(number)-1):
+        if abs(int(number[i])-int(number[i-1])) is not 1:
+            return "Not!!"
+    return "Jumping!!"
+```
+
+``` python
+def jumping_number(number):
+    digits = [int(n) for n in list(str(number))]
+    for i in range(len(digits)-1):
+        if abs(digits[i] - digits[i+1]) != 1:
+            return 'Not!!'
+    return 'Jumping!!'
+```
+
+解法類似
+``` python
+def jumping_number(number):
+    arr = list(map(int, str(number)))
+    return ('Not!!', 'Jumping!!')[all(map(lambda a, b: abs(a - b) == 1, arr, arr[1:]))]
+```    
+
+
+<sol> **最好解法** 利用遞迴,由後往前比較,每次傳入n/10遞迴直到數字<10
+
+``` python
+def jumping_number(n):
+    if n <10:
+        return "Jumping!!"
+    elif abs (n%10 - (n/10)%10) is not 1:
+        return "Not!!"
+    else:
+        return jumping_number(n/10)
+     return "Jumping!!"
+``` 
+
+
+
+
+
+
+
+
 
 
