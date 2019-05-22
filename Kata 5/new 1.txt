@@ -1,0 +1,27 @@
+def fibonacci(n):   
+    if n == 0: return 0
+    elif n == 1: return 1
+    else: return fibonacci(n-1)+fibonacci(n-2)
+    
+def padovan(n):   
+    if n == 0: return 1
+    elif n == 1: return 0
+    elif n == 2: return 0
+    else: return padovan(n-2)+padovan(n-3)    
+    
+
+def mixbonacci(pattern, length):
+    if not pattern or length<=0:
+        return []
+    result=[]
+    f,n=0,0  
+    
+    for i in range(length):
+        count=length%len(pattern)-1
+        if pattern[count]=='fib':
+            result.append(fibonacci(f))
+            f+=1
+        elif pattern[count]=='pad':
+            result.append(padovan(n))
+            n+=1    
+    return result

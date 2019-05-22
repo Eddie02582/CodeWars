@@ -1,0 +1,11 @@
+https://www.codewars.com/kata/584c3e45710dca21be000088
+
+findLongest("()") === 2
+findLongest("()(") === 2
+findLongest("()()") === 4
+findLongest("()()(") === 4
+findLongest("(()())") === 6
+findLongest("(()(())") === 6
+findLongest("())(()))") === 4
+findLongest("))((") === 0
+findLongest("") === 0
