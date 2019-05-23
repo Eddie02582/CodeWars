@@ -31,7 +31,7 @@ Notes
 
 
 
-<sol> 簡單來說 v=vo+at,t=(v-vo)/a,至高點v=0,a=-g=-9.81,題目有說returns the time in tenth of second ,回傳10*t
+<sol> 簡單來說 v=vo+at,t=(v-vo)/a,至高點v=0,a=-g=-9.81,t=vo/g,題目有說returns the time in tenth of second ,回傳10*t
 
 ``` python
 def max_ball(v0):
