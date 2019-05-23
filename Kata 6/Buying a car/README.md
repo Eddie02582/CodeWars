@@ -32,12 +32,26 @@ nbMonths(12000, 8000, 1000, 1.5) should return [0, 4000]
 nbMonths(8000, 8000, 1000, 1.5) should return [0, 0]
 ```
 
+依題意,假設有2000元,想買新車8000元,每個月可以存1000元,新舊車每個月折損1.5%,每兩個月折損增加0.5%
 
 
 
-
-
-
+```
+def nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth):
+    currentPrice=startPriceOld
+    month=0
+    percent=1-percentLossByMonth*0.01
+    
+    while(currentPrice < startPriceNew):
+        month+=1           
+        if month %2==0:
+            percent=percent-0.5*0.01 
+        startPriceOld*=percent 
+        startPriceNew*=percent           
+        currentPrice=savingperMonth*month+startPriceOld     
+            
+    return [month,round(currentPrice-startPriceNew)]
+```
 
 
 
