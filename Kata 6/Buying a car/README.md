@@ -36,7 +36,7 @@ nbMonths(8000, 8000, 1000, 1.5) should return [0, 0]
 
 
 
-```
+```python
 def nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth):
     currentPrice=startPriceOld
     month=0
