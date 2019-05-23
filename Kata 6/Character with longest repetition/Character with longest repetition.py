@@ -1,20 +1,18 @@
 def longest_repetition(chars):
-    if len(chars)==0:
-        return ("",0)
-    tempCount=1
-    Count=0
-    templetter=''
-    letter=chars[0]
-    for c in chars:
-        if c !=templetter:
-            templetter=c
-            tempCount=1
-        else :
-            tempCount+=1
-        if tempCount>Count:
-            Count=tempCount
-            letter=templetter        
-    return (letter,Count)
+    max=0
+    count=1
+    temp=""
+    for i in range(0,len(chars)-1):
+        if chars[i]==chars[i+1]:
+            count+=1
+        else:
+            count=1
+            
+        if count>max :
+            temp=chars[i]            
+            max= count            
+        
+    return (temp,max)
 	
 	
 def longest_repetition(chars):
