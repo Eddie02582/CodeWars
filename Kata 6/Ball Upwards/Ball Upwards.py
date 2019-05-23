@@ -2,8 +2,7 @@ def h(v,t):
 	return v*(1000/3600)*t-0.5*9.81*t**2
 
 def max_ball(v0):
-    a=[h(v0,i*0.1)for i in range(1,101,1)]
-    print (a)
+    a=[h(v0,i*0.1)for i in range(1,101,1)]   
     return a.index(max(a))+1
 	
 	
@@ -19,3 +18,8 @@ let h = 0 [that is, when the ball has returned to the ground]
 
 def max_ball(v0):
     return round(10*v0/9.81/3.6)
+    
+def max_ball(v0):
+    v0=v0*1000/3600
+    t=v0/9.81
+    return round(t*10)
