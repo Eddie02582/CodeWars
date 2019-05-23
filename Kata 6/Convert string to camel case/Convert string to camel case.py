@@ -5,3 +5,13 @@ def to_camel_case(s):
 def to_camel_case(text):
     return ''.join(v.title() if i else v for i,v in enumerate(re.split('[_-]',text)))
 	
+
+def to_camel_case(text):
+    a=[]
+    for i,v in enumerate(re.split('[_-]',text)):
+        if i:
+            a.append(v.title())
+        else:
+            a.append(v)    
+    
+    return ''.join(a)
