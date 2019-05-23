@@ -6,24 +6,7 @@ For empty string return ('', 0) (in Haskell Nothing, in C# Tuple<char, int>(null
 
 
 
-```python
-def nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth):
-    currentPrice=startPriceOld
-    month=0
-    percent=1-percentLossByMonth*0.01
-    
-    while currentPrice < startPriceNew:
-        month+=1           
-        if month %2==0:
-            percent=percent-0.5*0.01 
-        startPriceOld*=percent 
-        startPriceNew*=percent           
-        currentPrice=savingperMonth*month+startPriceOld     
-            
-    return [month,round(currentPrice-startPriceNew)]
-```
-
-
+<sol> 利用迴圈判斷如果是相同字元count+=1,如果是不同字元count=1
 ```python
 def longest_repetition(chars):
     max=0
@@ -41,15 +24,17 @@ def longest_repetition(chars):
     return (temp,max)
 ```	
 
+<sol> 利用groupby
 ```python	
 def longest_repetition(chars):
     from itertools import groupby
     return max(((char, len(list(group))) for char, group in groupby(chars)),
                key=lambda char_group: char_group[1], default=("", 0))
 ```	    
-          
+
+<sol> 利用re 配對,再取出長度最長的        
 ```python	
-			   
+import re			   
 def longest_repetition(chars):
     if not chars: return ("", 0)    
     longest = max(re.findall(r"((.)\2*)", chars), key=lambda x: len(x[0]))
