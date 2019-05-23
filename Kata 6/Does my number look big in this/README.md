@@ -13,15 +13,7 @@ and 1634 (4 digits):
 <sol> 切割 _和-,如果i==0,維持原字串,其他轉成title 型式
 
 ```python
-import re
-def to_camel_case(text):
-    a=[]
-    for i,v in enumerate(re.split('[_-]',text)):
-        if i:
-            a.append(v.title())
-        else:
-            a.append(v)    
-    
-    return ''.join(a)
+def narcissistic( value ):
+    return value== sum([int(x)**len(str(value)) for x in str(value)])
 ```	
 
