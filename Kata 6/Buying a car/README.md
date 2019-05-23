@@ -42,7 +42,7 @@ def nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth):
     month=0
     percent=1-percentLossByMonth*0.01
     
-    while(currentPrice < startPriceNew):
+    while currentPrice < startPriceNew:
         month+=1           
         if month %2==0:
             percent=percent-0.5*0.01 
