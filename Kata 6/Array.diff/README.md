@@ -1,4 +1,4 @@
-# Jumping Number (Special Numbers Series #4)
+# Arraydiff
 
 <a href="https://www.codewars.com/kata/523f5d21c841566fde000009">原文</a>
 
