@@ -31,8 +31,28 @@ An empty array should be treated like a 0 in this problem.
 
 <sol> 切割 _和-,如果i==0,維持原字串,其他轉成title 型式
 
+
+
+<sol> 直覺做法
 ```python
-def narcissistic( value ):
-    return value== sum([int(x)**len(str(value)) for x in str(value)])
+def find_even_index(arr):  
+    if not sum(arr):
+        return 0
+    for i in range(0,len(arr)):
+        if sum(arr[0:i])==sum(arr[i+1:]):
+            return i        
+    return -1
 ```	
 
+<sol> 用指針一動,總和一加一減,注意left_sum需後再加,當i=0時,left_sum=0
+```python
+def find_even_index(arr):
+    left_sum = 0
+    right_sum = sum(arr)
+    for i, a in enumerate(arr):
+        right_sum -= a
+        if left_sum == right_sum:
+            return i
+        left_sum += a
+    return -1
+```	

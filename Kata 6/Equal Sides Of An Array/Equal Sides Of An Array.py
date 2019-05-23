@@ -32,9 +32,24 @@ An empty array should be treated like a 0 in this problem.
 
 
 def find_even_index(arr):
-    for i in range(len(arr)):
-        if sum(arr[:i]) == sum(arr[i+1:]):
+    left_sum = 0
+    right_sum = sum(arr)
+    for i, a in enumerate(arr):
+        right_sum -= a
+        if left_sum == right_sum:
             return i
+        left_sum += a
     return -1
+
+
+def find_even_index(arr):  
+    if not sum(arr):
+        return 0
+    for i in range(0,len(arr)):
+        if sum(arr[0:i])==sum(arr[i+1:]):
+            return i        
+    return -1
+
+    
 	
 print find_even_index([10,-80,10,10,15,35,20])
