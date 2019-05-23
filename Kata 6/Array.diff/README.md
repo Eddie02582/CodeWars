@@ -15,40 +15,48 @@ If a value is present in b, all of its occurrences must be removed from the othe
 ArrayDiff(new int[] {1, 2, 2, 2, 3}, new int[] {2}) => new int[] {1, 3}
 ```
 
+Note:注意題目沒說array 排序過的
 
-<sol> 一般解法將數字轉為字串,再將字串轉成數字陣列,前後比較差值是否為1
+<sol> 簡單利用for 迴圈搭配 not in 
 
 ``` python
-def tidyNumber(n):
-    #pass  
-    arr=list(str(n))
-    for i in range (1,len(arr)):
-        if int(arr[i])-int(arr[i-1]) <0:
-            return False
-    return True
+def array_diff(a, b):
+    return [ x for x in a if x not in b]
 ```
 
+<sol> 簡單利用for 迴圈搭配 all
 利用all
 ``` python
-def tidyNumber(n): 
-	arr=list(str(n))
-	return all (int(arr[i])- int(arr[i-1]) >=0 for i in range (1,len(arr))) 
+def array_diff(a, b):
+    return [ x for x in a if all (x !=y for y in b)]
 ```
 
+<sol> 利用filter 搭配lambda
+利用all
+``` python
+def array_diff(a, b):
+    return filter(lambda i: i not in b, a)
+```
 
-
-<sol> 判斷排序完的值是否與位排序一樣
+<sol> 若陣列以排序,或不能使用新額外陣列,可以使用下列方法,利用兩個指針p1,p2,當a[p1]<b[p2]時,p1指針往下移動,當a[p1]>b[p2]時,p2指針往下移動
 
 ``` python
-def tidyNumber(n):
-    s = list(str(n))
-    return s == sorted(set(s))
+def array_diff2(a, b):
+    #a.sort()
+    #b.sort()
+    p1=0
+    p2=0
+    while(p2<len(b) and p1<len(a)):
+        if(a[p1]==b[p2]):
+            a.remove(a[p1])
+        elif a[p1]<b[p2]:
+            p1+=1
+        elif a[p1]>b[p2]:
+            p2+=1
+    return a  
 ``` 
 
-``` python
-def tidyNumber(n):    
-    return str(n) == ''.join(sorted(list(str(n))))
-``` 
+
 
 
 
