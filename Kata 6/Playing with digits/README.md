@@ -26,16 +26,11 @@ digPow(46288, 3) should return 51 since 43 + 6?+ 2? + 8? + 8? = 2360688 = 46288 
 
 ```
 
-
+<sol>
 
 ```python 
-def persistence(n):   
-    count=0    
-    while n >= 10: 
-        count += 1 
-        total=1      
-        for x in str(n):
-            total*=int(x)           
-        n=total  
-    return count
+def dig_pow(n, p):
+    # your code
+    a=sum(int(x)**(i) for i,x in  enumerate(str(n),p))    
+    return  a/n  if a%n ==0 else -1
 ```
