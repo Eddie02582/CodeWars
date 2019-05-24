@@ -33,3 +33,14 @@ def highest_rank(arr):
 	
 def highest_rank(arr):
     return sorted(arr,key=lambda x: (arr.count(x),x))[-1]
+
+
+def highest_rank(arr):
+    # your code here
+    dic={}
+    for i in arr:
+        if i not in dic:
+            dic[i]=1
+        else:
+            dic[i]=dic[i]+1    
+    return max(dic.items(),key=lambda x: (x[1],x[0]))[0]
