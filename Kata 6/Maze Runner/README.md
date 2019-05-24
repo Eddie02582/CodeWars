@@ -34,3 +34,27 @@ maze = [[1,1,1,1,1,1,1],
 2. The start and finish positions will change for the final tests.
 3. The directions array will always be in upper case and will be in the format of N = North, E = East, W = West and S = South.
 ```  
+
+
+<sol>首先先找到出發點,接著跟著移動,撞牆會超出範圍就會死,步伐走完沒到出口就算Lost
+```python
+def maze_runner(maze, directions):
+    dic_row={"N":-1,"S":1}
+    dic_col={"E":1,"W":-1}
+    max_row,max_col=len(maze),len(maze[0])   
+    for i in range(max_row):        
+        if 2 in maze[i]:            
+            row,col=i,maze[i].index(2)
+            break  
+
+    for dire in directions:
+        row+=dic_row.get(dire,0)
+        col+=dic_col.get(dire,0)    
+        if row < 0 or col <0 or max_row <=row or max_col<=col or maze[row][col]==1: 
+            return "Dead"   
+        if maze[row][col]==3:
+            return "Finish"
+    return "Lost"
+
+
+```
