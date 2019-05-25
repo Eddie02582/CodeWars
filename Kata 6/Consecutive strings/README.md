@@ -7,8 +7,9 @@ longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abi
 n being the length of the string array, if n = 0 or k > n or k <= 0 return "".</br>
 
 ## Note
-consecutive strings : follow one after another without an interruption</br>
-
+<ul>
+    <li>consecutive strings : follow one after another without an interruption</li>
+</ul>
 
 
 
