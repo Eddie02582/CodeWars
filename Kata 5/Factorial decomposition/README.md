@@ -17,14 +17,10 @@ Notes
 <ul>
     <li>the function is decomp(n) and should return the decomposition of n! into its prime factors in increasing order of the primes, as a string.</li>
 	<li>factorial can be a very big number (4000! has 12674 digits, n will go from 300 to 4000).</li>
-	<li>In Fortran - as in any other language - the returned string is not permitted to contain any redundant trailing whitespace: you can use dynamically allocated character strings</li>
-	
+	<li>In Fortran - as in any other language - the returned string is not permitted to contain any redundant trailing whitespace: you can use dynamically allocated character strings</li>	
 </ul>
 
-
-
-
-<sol>第一個迴圈2到n,在依序拆解找出質因數</br>
+sol:第一個迴圈2到n,在依序拆解找出質因數</br>
 第二個迴圈用一指針由2開始,若整除指針表示含有因數,並利用字典記錄個數,若不整除,指針加1,直到數字變1,表示找完因數
 
 ``` python

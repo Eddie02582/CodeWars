@@ -13,7 +13,7 @@ consecutive strings : follow one after another without an interruption</br>
 
 
 
-<sol> 利用迴圈index 0 到 len(strarr) - k ,截取[index:index+k],找出最大長度
+**sol** :利用迴圈index 0 到 len(strarr) - k ,截取[index:index+k],找出最大長度
 
 ```python
 def longest_consec(strarr, k):
@@ -28,7 +28,8 @@ def longest_consec(strarr, k):
     return result
 ```	
 
-<sol> 
+**sol** :
+
 ```python	
 def longest_consec(strarr, k):
     if (len(strarr) == 0 or k <= 0) or len(strarr) < k:
