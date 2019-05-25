@@ -12,14 +12,17 @@ Should return: 160 (the only even number)
 
 
 
-<sol> odds and evens 分別存入odd and even ,回傳長度為1的值
+##Solution
+
+sol odds and evens 分別存入odd and even ,回傳長度為1的值
 ```python
 def find_outlier(int):
     odds = [x for x in int if x%2!=0]
     evens= [x for x in int if x%2==0]
     return odds[0] if len(odds)==1 else evens[0]
 ```	
-<sol> 同上
+
+sol: 同上
 ```python
 def find_outlier(integers):    
     odd=[]
@@ -32,7 +35,7 @@ def find_outlier(integers):
     return  odd [0]if len(odd)==1 else even[0]
 ```	
 
-<sol> 先將陣列值除以2,總和為1的即是odd ,再利用list.index找出值的index,回傳integers[index]
+sol: 先將陣列值除以2,總和為1的即是odd ,再利用list.index找出值的index,回傳integers[index]
 ```python	
 def find_outlier(integers):
     parity = [n % 2 for n in integers]
