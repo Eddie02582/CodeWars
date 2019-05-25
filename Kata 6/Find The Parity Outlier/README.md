@@ -9,10 +9,10 @@ Should return: 11 (the only odd number)
 
 [160, 3, 1719, 19, 11, 13, -21]
 Should return: 160 (the only even number)
+```
 
 
-
-##Solution
+## Solution
 
 sol odds and evens 分別存入odd and even ,回傳長度為1的值
 ```python
