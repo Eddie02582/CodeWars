@@ -10,7 +10,7 @@ to_camel_case("The_Stealth_Warrior") # returns "TheStealthWarrior"
 
 
 
-
+## Solution
 
 <sol> 切割 _和-,如果i==0,維持原字串,其他轉成title 型式
 

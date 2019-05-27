@@ -9,6 +9,8 @@ IQ.Test("2 4 7 8 10") => 3 // Third number is odd, while the rest of the numbers
 IQ.Test("1 2 1 1") => 2 // Second number is even, while the rest of the numbers are odd
 ```
 
+## Solution
+
 <sol> 判斷奇偶利用除以2餘數判斷
 ```python
 def iq_test(numbers):

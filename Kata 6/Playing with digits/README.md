@@ -25,7 +25,7 @@ digPow(695, 2) should return 2 since 62 + 93 + 5?= 1390 = 695 * 2
 digPow(46288, 3) should return 51 since 43 + 6?+ 2? + 8? + 8? = 2360688 = 46288 * 51
 
 ```
-
+## Solution
 <sol>
 
 ```python 

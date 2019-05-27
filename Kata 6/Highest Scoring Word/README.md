@@ -9,6 +9,7 @@ If two words score the same, return the word that appears earliest in the origin
 
 All letters will be lowercase and all inputs will be valid.</br>
 
+## Solution
 
 ```python
 def high(x):

@@ -10,6 +10,7 @@ Deadfish has 4 commands, each 1 character long:
     <li>o outputs the value into the return array</li>
 </ul>
 
+## Solution
 
 ```python
 def parse(data):

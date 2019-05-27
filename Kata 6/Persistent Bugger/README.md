@@ -13,7 +13,7 @@ Examples
  persistence(4) => 0   # Because 4 is already a one-digit number.
 ```
 
-
+## Solution
 ```python 
 def persistence(n):   
     count=0    

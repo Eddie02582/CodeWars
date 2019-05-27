@@ -13,6 +13,8 @@ var arr = new int[] { 12, 10, 8, 8, 3, 3, 3, 3, 2, 4, 10, 12, 10 };
 Kata.HighestRank(arr) //=> returns 3
 ```
 
+## Solution
+
 <sol> 排序 以(arr.count(x),x)排序方式,先排arr.count(x)在排x
 ```python
 def highest_rank(arr):

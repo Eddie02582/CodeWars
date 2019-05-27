@@ -18,7 +18,7 @@ output: "hIJKMNPQRSTUVWXZoPQRSTUVWXZlMNPQRSTUVWXZlyZ"</br>
 
 You don't need to validate input, the input string will always contain a certain amount of lowercase letters (min 1 / max 50).</br>
 
-
+## Solution
 
 <sol>迴圈每個字元,在判斷字元是否在word 內沒有,加入該字元後不在字串裡面的字元
 ```python

@@ -15,6 +15,8 @@ Examples
 123.045.067.089
 ```
 
+## Solution
+
 <sol> for 迴圈判斷是數字且範圍在[0,..255],且非0d開頭
 ```python
 def is_valid_IP(s):

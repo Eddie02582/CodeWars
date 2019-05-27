@@ -4,9 +4,9 @@ For a given string s find the character c with longest consecutive repetition an
 
 For empty string return ('', 0) (in Haskell Nothing, in C# Tuple<char, int>(null, 0), in Shell ,0, in JavaScript ["",0], in Ruby ["", 0], in Groovy ["", 0]).</br>
 
+## Solution
 
-
-<sol> 利用迴圈判斷如果是相同字元count+=1,如果是不同字元count=1
+sol: 利用迴圈判斷如果是相同字元count+=1,如果是不同字元count=1
 ```python
 def longest_repetition(chars):
     max=0
@@ -24,7 +24,7 @@ def longest_repetition(chars):
     return (temp,max)
 ```	
 
-<sol> 利用groupby
+sol:  利用groupby
 ```python	
 def longest_repetition(chars):
     from itertools import groupby
@@ -32,7 +32,7 @@ def longest_repetition(chars):
                key=lambda char_group: char_group[1], default=("", 0))
 ```	    
 
-<sol> 利用re 配對,再取出長度最長的        
+sol: 利用re 配對,再取出長度最長的        
 ```python	
 import re			   
 def longest_repetition(chars):

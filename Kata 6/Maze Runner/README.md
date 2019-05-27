@@ -34,7 +34,7 @@ maze = [[1,1,1,1,1,1,1],
 2. The start and finish positions will change for the final tests.
 3. The directions array will always be in upper case and will be in the format of N = North, E = East, W = West and S = South.
 ```  
-
+## Solution
 
 <sol>首先先找到出發點,接著跟著移動,撞牆會超出範圍就會死,步伐走完沒到出口就算Lost
 ```python

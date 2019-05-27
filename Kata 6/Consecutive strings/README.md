@@ -12,7 +12,7 @@ n being the length of the string array, if n = 0 or k > n or k <= 0 return "".</
 </ul>
 
 
-
+## Solution
 
 **sol** :利用迴圈index 0 到 len(strarr) - k ,截取[index:index+k],找出最大長度
 
