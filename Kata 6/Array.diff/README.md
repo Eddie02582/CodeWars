@@ -38,7 +38,7 @@ def array_diff(a, b):
     return filter(lambda i: i not in b, a)
 ```
 
-**sol** :若陣列以排序,或不能使用新額外陣列,可以使用下列方法,利用兩個指針p1,p2,當a[p1]<b[p2]時,p1指針往下移動,當a[p1]>b[p2]時,p2指針往下移動
+** sol ** :若陣列以排序,或不能使用新額外陣列,可以使用下列方法,利用兩個指針p1,p2,當a[p1]<b[p2]時,p1指針往下移動,當a[p1]>b[p2]時,p2指針往下移動
 
 ``` python
 def array_diff2(a, b):
