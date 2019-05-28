@@ -1,42 +1,44 @@
-# Reverse or rotate?
+# Sum of Digits / Digital Root
 
-The input is a string str of digits. Cut the string into chunks (a chunk here is a substring of the initial string) of size sz (ignore the last chunk if its size is less than sz).
+In this kata, you must create a digital root function.</br>
 
-If a chunk represents an integer such as the sum of the cubes of its digits is divisible by 2, reverse that chunk; otherwise rotate it to the left by one position. Put together these modified chunks and return the result as a string.
+A digital root is the recursive sum of all the digits in a number. Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. This is only applicable to the natural numbers.</br>
 
-If
-<ul>
-    <li>sz is <= 0 or if str is empty return ""</li>
-    <li>sz is greater (>) than the length of str it is impossible to take a chunk of size sz hence return "".</li>
-</ul>
-## Example:
+Here's how it works:</br>
+
 
 ```
-    revrot("123456987654", 6) --> "234561876549"
-    revrot("123456987653", 6) --> "234561356789"
-    revrot("66443875", 4) --> "44668753"
-    revrot("66443875", 8) --> "64438756"
-    revrot("664438769", 8) --> "67834466"
-    revrot("123456779", 8) --> "23456771"
-    revrot("", 8) --> ""
-    revrot("123456779", 0) --> "" 
-    revrot("563000655734469485", 4) --> "0365065073456944"
+digital_root(16)
+=> 1 + 6
+=> 7
+
+digital_root(942)
+=> 9 + 4 + 2
+=> 15 ...
+=> 1 + 5
+=> 6
+
+digital_root(132189)
+=> 1 + 3 + 2 + 1 + 8 + 9
+=> 24 ...
+=> 2 + 4
+=> 6
+
+digital_root(493193)
+=> 4 + 9 + 3 + 1 + 9 + 3
+=> 29 ...
+=> 2 + 9
+=> 11 ...
+=> 1 + 1
+=> 2
 ```
 
 
 ## Solution
-<sol>
 
 ```python 
-def revrot(strng, sz):
-    if sz <= 0 or strng == "" or sz > len(strng):
-        return ""  
-    result=""
-    for i in range(0, len(strng) // sz):
-		part = strng[sz*i:sz*(i + 1)]
-		if sum(map(lambda x:int(x),s))%2 ==0 
-            result+=part[::-1])
-	    else:
-            result+=part[1:]+part[0] 
-    return result
+def digital_root(n):         
+    while(n>10):        
+        n=sum[int(digit) for digit in str(n)]    
+    return n    
 ```
