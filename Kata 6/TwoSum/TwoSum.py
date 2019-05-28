@@ -13,3 +13,5 @@ def two_sum(nums, target):
         if diff in d:
             return [d[diff], i]
         d[num] = i
+        
+        
