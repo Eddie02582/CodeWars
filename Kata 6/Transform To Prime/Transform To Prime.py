@@ -1,6 +1,8 @@
 def minimum_number(numbers):
+    if sum(numbers)==1:
+        return 2
     sums=sum(numbers)
-    while　True　:        
+    while True:        
         if all (sums%i for i in range(2,int(sums**0.5)+1,1)):
             return sums-sum(numbers)
         sums=sums+1
