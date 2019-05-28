@@ -40,16 +40,23 @@ Since , the sum of the list's elements equal to (189) , the minimum number to be
 
 ## Solution
 
-sol :利用set,再排序,再取出n-1位置
+sol :while迴圈如果是質數回傳增加的數
 
 ```python 
-def title_case(title, minor_words=''):
-    words=[ word.lower() for word in minor_words.split(' ')]
-    titles=title.split(' ')
-    for i,t in enumerate(titles):
-        if i!=0 and t.lower()  in words:
-            titles[i]=titles[i].lower()
+def minimum_number(numbers):
+    n=sum(numbers)  
+    add=0
+    while True:
+        if is_prime(n+add):
+            return add
         else:
-            titles[i]=titles[i].title()
-    return ' '.join(titles) 
-```
+            add += 1    
+    return add
+
+def is_prime(n):
+    if n==1:
+        return False
+    elif n==2:
+        return True
+    else:
+        return all ( [n%i for i in range(2,int(n**0.5)+1)])
