@@ -13,9 +13,8 @@ Based on: http://oj.leetcode.com/problems/two-sum/</br>
 def two_sum(numbers, target):
     dic={}
     for index,n in enumerate(numbers):
-        if target-n not in dic:
-            dic[n]=index
-        else:
-            return [dic[target-n] ,index]
+        if target-n in dic:
+            return [dic[target-n] ,index]      
+        dic[n]=index
     return []
 ```
