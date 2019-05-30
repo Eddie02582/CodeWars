@@ -83,6 +83,7 @@ Here the smallest difference is 0 and in the result the indexes are in ascending
 sol :首先建立符合回傳格式的陣列[number-weight, index  original number],接著利用zip找出計算出前後差,找出最小,回傳index,index+1陣列
 
 ``` python
+def closest(strng):
     weight = sorted([ [sum(int(c) for c in n), i, int(n)] for i, n in enumerate(strng.split()) ], key=lambda x: (x[0], x[1]))
     diff = [ abs(a[0] - b[0]) for a, b in zip(weight, weight[1:]) ]
     index=diff.index(min(diff))
