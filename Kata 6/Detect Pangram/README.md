@@ -5,20 +5,7 @@ Given a string, detect whether or not it is a pangram. Return True if it is, Fal
 
 ## Solution
 
-<sol> 切割 _和-,如果i==0,維持原字串,其他轉成title 型式
 
-```python
-import re
-def to_camel_case(text):
-    a=[]
-    for i,v in enumerate(re.split('[_-]',text)):
-        if i:
-            a.append(v.title())
-        else:
-            a.append(v)    
-    
-    return ''.join(a)
-```	
 
 <sol> 
 ```python	3.6
