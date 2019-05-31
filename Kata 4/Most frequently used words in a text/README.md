@@ -51,7 +51,7 @@ def top_3_words(text):
     return result
 ```
 
-sol :這寫法就好,利用re.sub將" ' "取代" "在切跟非a-z ,最後再取出most_common(3)
+sol :利用re.sub將" ' "取代" "在切跟非a-z ,最後再取出most_common(3)
 ``` python
 from collections import Counter
 import re
