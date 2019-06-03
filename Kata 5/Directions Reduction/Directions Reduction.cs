@@ -1,12 +1,13 @@
 public class DirReduction {
   
-    public static string[] dirReduc(String[] arr) {
-         // "NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST" 
-            Dictionary<string, string> dic = new Dictionary<string, string>();
-            dic.Add("NORTH", "SOUTH");
-            dic.Add("SOUTH", "NORTH");
-            dic.Add("WEST", "EAST");
-            dic.Add("EAST", "WEST");
+    public static string[] dirReduc(String[] arr) {  
+            Dictionary<string, string> dic = new Dictionary<string, string>()
+            {
+                {"NORTH", "SOUTH"},
+                {"SOUTH", "NORTH"},
+                {"EAST", "WEST"},
+                {"WEST", "EAST"}
+            };
 
             Stack<string> result = new Stack<string>();           
 
