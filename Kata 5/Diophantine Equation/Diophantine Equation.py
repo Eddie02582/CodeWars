@@ -10,3 +10,4 @@ def sol_equa(n):
                 result.append([x,y])            
     
     return result
+print (sol_equa(9000000041))
