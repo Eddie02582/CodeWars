@@ -33,4 +33,4 @@ class Primes:
                 del D[q]
             q += 1
             
-            
+       
